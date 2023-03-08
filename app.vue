@@ -5,9 +5,10 @@
       <Meta name="description" :content="description" />
     </Head>
 
-    <nuxt-layout>
+    <div class="app">
+      <app-top-bar />
       <nuxt-page />
-    </nuxt-layout>
+    </div>
   </div>
 </template>
 
@@ -20,4 +21,11 @@ useHead({
 });
 </script>
 
-<style lang="postcss" scoped></style>
+<style lang="postcss" scoped>
+.app {
+  min-height: 100vh;
+  background: var(--colors-gray-50);
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+</style>
